@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rtesseract (3.1.2)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  rtesseract
+
+BUNDLED WITH
+   2.3.10
