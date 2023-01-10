@@ -27,12 +27,20 @@ puts "creating hex markdown files"
   # markup headers
   text = "# #{text}"
   text.gsub!(/\n\n([A-Za-z0-9\ \(\)\-\'\’]*)\n\n/, '\n\n## \1\n\n')
+  
+  # markup bold prompts
+  text.gsub!(/\n\n([^:]*)(\:.*)\n/, '\n\n**\1**\2\n')
+  
+  # cleanup mangled line endings
   text.gsub!('\\n', "\n")
   
   # remove page number
   text.gsub!("\n\n#{i-1}\n", "\n\n")
+  
+  
   # remove line wrap
   text.gsub!("\n\n", "¶¶¶").gsub!("\n", ' ').gsub!("¶¶¶", "\n\n")
+  
 
   # write markdown file
   File.write("./Hexes/Hex #{hex_number}.md", text)

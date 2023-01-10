@@ -1,5 +1,5 @@
 # dolmenwood-to-markdown
-a script for converting the dolmenwood hex descriptions to individual markdown files
+a script for converting the Dolmenwood RPG setting content to individual markdown files
 
 # Requirements
 Ruby
